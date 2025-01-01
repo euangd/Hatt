@@ -6,18 +6,14 @@ jobs:
   build:
     strategy:
       fail-fast: false
-      matrix:
-        build: [
-          {name: wailsTest, platform: linux/amd64, os: ubuntu-latest},
-          {name: wailsTest, platform: windows/amd64, os: windows-latest},
-          {name: wailsTest, platform: darwin/universal, os: macos-latest}
-        ]
-    runs-on: ${{ matrix.build.os }}
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: recursive
       - uses: dAppServer/wails-build-action@v2.2
-        with:
-          build-name: ${{ matrix.build.name }}
-          build-platform: ${{ matrix.build.platform }}
+         with:
+    build-name: Hatt
+    build-platform: macos/arm64
+    package: false
+    app-working-directory: $PWD/Hatt

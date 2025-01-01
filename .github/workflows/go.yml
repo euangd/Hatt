@@ -12,8 +12,8 @@ jobs:
         with:
           submodules: recursive
       - uses: dAppServer/wails-build-action@v2.2
-         with:
-    build-name: Hatt
-    build-platform: macos/arm64
-    package: false
-    app-working-directory: $PWD/Hatt
+        with:
+          build-name: Hatt
+          build-platform: macos/arm64
+          package: false
+          app-working-directory: $PWD/Hatt

@@ -16,4 +16,3 @@ jobs:
           build-name: Hatt
           build-platform: macos/arm64
           package: false
-          app-working-directory: $PWD/Hatt
